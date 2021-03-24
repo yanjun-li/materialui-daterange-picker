@@ -18,3 +18,7 @@ export type DefinedRange = {
   endDate: Date;
   label: string;
 };
+export type MenuPropsType = {
+  disablePortal: boolean,
+  anchorEl?: Element
+}

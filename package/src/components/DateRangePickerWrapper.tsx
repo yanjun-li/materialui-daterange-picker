@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core';
 import DateRangePicker from './DateRangePicker';
 
 // eslint-disable-next-line no-unused-vars
-import { DateRange, DefinedRange } from '../types';
+import { DateRange, DefinedRange, MenuPropsType } from '../types';
 
 const useStyles = makeStyles(() => ({
   dateRangePickerContainer: {
@@ -39,6 +39,7 @@ export interface DateRangePickerWrapperProps {
   onChange: (dateRange: DateRange) => void;
   closeOnClickOutside?: boolean;
   wrapperClassName?: string;
+  MenuProps?: MenuPropsType
 }
 
 const DateRangePickerWrapper: React.FunctionComponent<DateRangePickerWrapperProps> = (

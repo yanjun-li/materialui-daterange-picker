@@ -17,6 +17,9 @@ import {
   getYear,
 } from 'date-fns';
 
+// eslint-disable-next-line no-unused-vars
+import { MenuPropsType } from '../types';
+
 const useStyles = makeStyles(() => ({
   iconContainer: {
     padding: 5,
@@ -36,6 +39,8 @@ interface HeaderProps {
   prevDisabled: boolean;
   onClickNext: () => void;
   onClickPrevious: () => void;
+  MenuProps?: MenuPropsType
+  // MenuProps: object
 }
 
 const MONTHS = [
@@ -67,6 +72,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
   prevDisabled,
   onClickNext,
   onClickPrevious,
+  MenuProps
 }: HeaderProps) => {
   const classes = useStyles();
 
@@ -93,7 +99,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
         <Select
           value={getMonth(date)}
           onChange={handleMonthChange}
-          MenuProps={{ disablePortal: true }}
+          MenuProps={MenuProps}
         >
           {MONTHS.map((month, idx) => (
             <MenuItem key={month} value={idx}>
@@ -107,7 +113,7 @@ const Header: React.FunctionComponent<HeaderProps> = ({
         <Select
           value={getYear(date)}
           onChange={handleYearChange}
-          MenuProps={{ disablePortal: true }}
+          MenuProps={MenuProps}
         >
           {generateYears(date, 30).map((year) => (
             <MenuItem key={year} value={year}>
