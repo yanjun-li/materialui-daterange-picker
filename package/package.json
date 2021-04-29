@@ -16,12 +16,14 @@
 		"lint": "./node_modules/.bin/eslint ./src --ext .js,.jsx,.ts,.tsx",
 		"build": "rollup -c",
 		"copy_publish_files": "cp ../README.md .",
-		"prepublish": "yarn run build && yarn run copy_publish_files"
+		"prepublish": "yarn run build && yarn run copy_publish_files",
+		"install-peers": "install-peers",
+		"postinstall": "yarn install-peers"
 	},
 	"peerDependencies": {
-		"@material-ui/core": "^4.9.4",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6"
+		"@material-ui/core": "4.11.0",
+		"react": "16.13.1",
+		"react-dom": "16.13.1"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.0.0",
@@ -58,8 +60,7 @@
 		"eslint-plugin-jsx-a11y": "^6.2.3",
 		"eslint-plugin-react": "^7.18.3",
 		"eslint-plugin-react-hooks": "^1.7.0",
-		"react": "16.8.6",
-		"react-dom": "16.8.6",
+		"install-peers-cli": "^2.2.0",
 		"react-scripts": "^3.0.1",
 		"rollup": "^1.1.2",
 		"rollup-plugin-babel": "^4.3.2",
@@ -71,7 +72,6 @@
 		"typescript": "^3.7.5"
 	},
 	"dependencies": {
-		"@material-ui/core": "^4.9.4",
 		"@material-ui/icons": "^4.9.1",
 		"classnames": "^2.2.6",
 		"date-fns": "^1.30.1"

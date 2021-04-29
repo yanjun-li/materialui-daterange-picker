@@ -20,5 +20,6 @@ export type DefinedRange = {
 };
 export type MenuPropsType = {
   disablePortal: boolean,
-  anchorEl?: Element
+  anchorEl?: any
+  // anchorEl?: Element
 }
