@@ -17,10 +17,10 @@ Check out the project running [here](https://codesandbox.io/s/materialui-dateran
 ## Usage
 
 ```bash
-npm install materialui-daterange-picker --save
+npm install @eugene-lee/materialui-daterange-picker --save
 
 # or with yarn
-yarn add materialui-daterange-picker
+yarn add @eugene-lee/materialui-daterange-picker
 ```
 
 ## Basic example
@@ -74,6 +74,7 @@ Name | Type | Required | Default value | Description
 `definedRanges` | `DefinedRange[]` | _optional_ | - | custom defined ranges to show in the list
 `closeOnClickOutside` | `boolean` | _optional_ | `true` | defines if DateRangePicker will be closed when clicking outside of it
 `wrapperClassName` | `object` | _optional_ | `undefined` | defines additional wrapper style classes
+`MenuProps` | `object` | _optional_ | `{disablePortal: true}`  | MenuProps pass to Select |
 
 ## Made possible by
 
